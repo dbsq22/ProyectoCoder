@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/Style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Tecno Compra</h1>
+        <nav>
+            <ul class="lista_menu">
+                <li><a href="../Index.html">Inicio</a></li>
+                <li><a href="Productos.html">Productos</a></li>
+                <li><a href="">Mi Cuenta</a>
+                    <ul>
+                        <li><a href="Conectarse.html">Conectarse</a></li>
+                        <li><a href="Registrarse.html">Registrarse</a></li>
+                    </ul>
+                </li>
+                <li><a href="Contacto.html">Contacto</a></li>
+                <li><a href="Sponsors.html">Sponsors</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="grilla_productos">
+        <img data-aos="zoom-in" id="imagen_productos_main" src="../img/pcgamer.png" alt="Imagen Productos">
+            <section class="orden">
+        <h2>Orden</h2>
+                <form action="">
+                    <label for="Destacados">Destacados</label>
+                    <input type="button" id="Destacados">
+    
+                    <label for="Mayor_Precio">Mayor Precio</label>
+                    <input type="button" id="Mayor_Precio">
+    
+                    <label for="Menor_Precio">Menor Precio</label>
+                    <input type="button" id="Menor_Precio">
+                </form>
+            </section>
+                <section class="buscador">
+                    <form action="">
+                        <input type="search" placeholder="Buscar">
+                    </form>
+                </section>
+        <section class="productos">
+            <ul>
+            <li>
+                <img src="https://mallweb.com.ar/media/catalog/product/cache/1/image/900x/9df78eab33525d08d6e5fb8d27136e95/g/i/gimage_25746.jpg" alt="Producto"> <p>Placa de video Gigabyte 1660 6GB GDDR5</p>
+            </li>
+            <li>
+                <img src="https://www.amd.com/system/files/2020-09/616656-amd-ryzen-5-5000-series-PIB-fan-1260x709.png" alt="Producto"> <p>Procesador AMD Ryzen 5 5600X</p>
+            </li>
+            <li>
+                <img src="https://d24t9mem9wyce.cloudfront.net/6875345-thickbox_default/placa-de-video-asus-8gb-rtx-3070-ti-rog-strix.jpg" alt="Producto"> <p>Placa de video Asus 3070ti 8GB GDDR6</p>
+            </li>
+            <li>
+                <img src="https://http2.mlstatic.com/D_NQ_NP_629601-MLA49005839788_022022-W.jpg" alt="Producto"> <p>Placa de video Zotac 3070ti 8GB GDDR6</p>
+            </li>
+            </ul>
+        </section>
+        <section class="filtros">
+        <h2>Filtros</h2>
+            <form action="">
+                <label for="Preensambladas">Preensambladas</label>
+                <input type="radio" id="Preensambladas" name="Filtros">
+
+                <label for="Procesadores">Procesadores</label>
+                <input type="radio" id="Procesadores" name="Filtros">
+
+                <label for="Placas_de_video">Placas de video</label>
+                <input type="radio" id="Placas_de_video" name="Filtros">
+
+                <label for="Memorias_RAM">Memorias RAM</label>
+                <input type="radio" id="Memorias_RAM" name="Filtros">
+
+                <label for="Almacenamiento">Almacenamiento</label>
+                <input type="radio" id="Almacenamiento" name="Filtros">
+
+                <label for="Fuentes">Fuentes</label>
+                <input type="radio" id="Fuentes" name="Filtros">
+
+                <label for="Coolers">Coolers</label>
+                <input type="radio" id="Coolers" name="Filtros">
+
+                <label for="Gabinetes">Gabinetes</label>
+                <input type="radio" id="Gabinetes" name="Filtros">
+
+                <label for="Monitores">Monitores</label>
+                <input type="radio" id="Monitores" name="Filtros">
+
+                <input type="submit">
+            </form>
+        </section>
+    </section>
+    </main>
+    <footer>
+        <h2>Nuestras Redes Sociales</h2>
+        <section>
+          <i><a href="https://www.instagram.com/"><img src="../img/Instagram_logo_2016.svg.png" alt="Instagram"></a></i>
+            <i><a href="https://twitter.com/?lang=es"><img src="../img/Twitter-logo.svg.png" alt="Twitter"></a></i>
+          <i><a href="https://www.facebook.com/"><img src="../img/facebook-770688_1280.png" alt="Facebook"></a></i>
+         <i><a href="https://www.youtube.com"><img src="../img/YouTube_full-color_icon_(2017).svg.png" alt="Youtube"></a></i>
+        </section>
+    </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
+</body>
+</html>
