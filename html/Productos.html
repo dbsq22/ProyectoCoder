@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/Style.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
@@ -28,19 +30,15 @@
     </header>
     <main>
         <section class="grilla_productos">
-        <img data-aos="zoom-in" id="imagen_productos_main" src="../img/pcgamer.png" alt="Imagen Productos">
+        <img class="img_fluid" data-aos="zoom-in" id="imagen_productos_main" src="../img/pcgamer.png" alt="Imagen Productos">
             <section class="orden">
         <h2>Orden</h2>
-                <form action="">
-                    <label for="Destacados">Destacados</label>
-                    <input type="button" id="Destacados">
-    
-                    <label for="Mayor_Precio">Mayor Precio</label>
-                    <input type="button" id="Mayor_Precio">
-    
-                    <label for="Menor_Precio">Menor Precio</label>
-                    <input type="button" id="Menor_Precio">
-                </form>
+        <select class="form-select" aria-label="Default select example">
+            <option selected>Orden</option>
+            <option value="1">Destacados</option>
+            <option value="2">Mayor precio</option>
+            <option value="3">Menor Precio</option>
+          </select>
             </section>
                 <section class="buscador">
                     <form action="">
