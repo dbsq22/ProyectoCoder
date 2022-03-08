@@ -84,6 +84,12 @@ footer h2{
     border-radius: 10px;
     border: 2px solid gray;
 }
+.ajustar_conectarse{
+    margin-top: 400px;
+}
+.ajustar_registrarse{
+    margin-top: 230px;
+}
 
 /*Productos*/
 .grilla_productos{
@@ -187,6 +193,12 @@ justify-content: space-evenly;
     text-align: center;
     margin-bottom: 18%;
     margin-top: 8%;
+}
+.formulario_conectarse input:focus{
+    background-color: greenyellow; 
+}
+.boton:active{
+    background-color: greenyellow;
 }
 
 /*Media Queries*/
