@@ -1,0 +1,18 @@
+/*Contacto*/
+.contacto{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    }
+    .titulo_mapa{
+        text-align: center;
+    }
+    .formulario_contacto{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .bajar{
+        position: relative;
+        top: 30px;
+    }

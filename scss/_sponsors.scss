@@ -1,0 +1,22 @@
+/*Sponsors*/
+#sponsors{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 400px 400px;
+    justify-items: center;
+    align-items: center;
+
+    i img{
+        max-width: 400px;
+        max-height: 400px;
+
+        &:hover{
+            max-width: 430px;
+            max-height: 430px;
+            filter:saturate(4);
+        }
+        }
+}
+.bi-qr-code{
+    font-size: 40px;
+}
