@@ -55,7 +55,7 @@ nav{
     justify-content: space-evenly;
 
     li{
-        @include estilo_menu(rgb(250, 196, 48));
+        @include estilo_menu(rgb(255, 232, 25));
 
         &:hover ul{
             display: block;
@@ -148,4 +148,31 @@ background-color: white;
         justify-content: center;
         align-items:center;
         }
+
+.productos{
+
+    ul{
+
+        li{
+            font-size: 18px;
+
+            .precios{
+                font-size: 28px;
+            }
+
+            img{
+                max-width: 130px;
+            }
+        }
+    }
+}
+nav{
+    ul{
+        li{
+            ul{
+                z-index:calc(8);
+            }
+        }
+    }
+}
 }

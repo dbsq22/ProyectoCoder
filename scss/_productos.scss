@@ -37,7 +37,14 @@
 
         li{
             display: flex;
-            flex-direction: row;
+            font-size: 20px;
+            font-family: 'Times New Roman', Times, serif;
+
+            .precios{
+                font-size: 40px;
+                margin-top: 30px;
+                color:greenyellow;
+            }
 
             img{
                 max-width: 180px;
@@ -47,11 +54,20 @@
 }
 .filtros{
     grid-area: filtros;
-
+    #titulo_filtros{
+        text-align: center
+    }
     form{
         @extend .superclase;
         background-color: $filtros_color;
         align-items: center;
         border-radius: 10px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        border: 1px rgb(219, 143, 0) solid;
+        font-size: large;
+
+        input{
+            border: 2px black solid;
+        }
     }
 }
