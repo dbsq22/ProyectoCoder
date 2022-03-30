@@ -43,7 +43,7 @@ h1{
             text-decoration: none;
 
         &:hover{
-            font-size: 20px;
+            font-size: 18px;
         }
     }
 }
@@ -218,7 +218,6 @@ background-color: white;
 }
 .superclase_menu_desplegable{
     position: absolute;
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
     right: 0;
@@ -236,7 +235,7 @@ background-color: white;
     z-index: calc(130);
 
     &:hover{
-        background: greenyellow;
+        background: rgb(255, 232, 25);
     }
 
     input{
@@ -331,7 +330,6 @@ header{
 }
 .superclase_menu_desplegable2{
     position: absolute;
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
     right: 0;
