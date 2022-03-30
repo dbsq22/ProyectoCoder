@@ -5,7 +5,7 @@
 }
 .grilla_productos{
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-columns: 1fr 3fr 1fr;
     grid-template-rows: 540px 40px 800px;
     grid-template-areas:
     "imagen imagen imagen"
@@ -30,7 +30,7 @@
 
     ul{
         list-style-type: none;
-        overflow: scroll;
+        overflow:auto;
         height: 100%;
         @extend .superclase;
         justify-content: space-evenly;

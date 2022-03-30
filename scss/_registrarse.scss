@@ -1,0 +1,29 @@
+/*Registrarse*/
+.formulario_registrarse{
+    display: flex;
+    flex-direction:row;
+
+    section{
+    .mb-3{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        width: 800px;
+        position: relative;
+        left: 2px;
+        top: 30px;
+    }
+    .btn , btn-primary{
+        position: relative;
+        left: 2px;
+        top: 30px;
+    }
+    p{
+        font-size: 70px;
+        font-family: 'Times New Roman', Times, serif;
+        position: relative;
+        left: 0px;
+        top: 30px;
+    }
+}
+}

@@ -6,6 +6,7 @@
 @import "./conectarse";
 @import "./index";
 @import "./sponsors";
+@import "./registrarse";
 body{
 margin: 0;
 padding: 0;
@@ -25,6 +26,7 @@ h1{
     position: relative;
     top: 30px;
     font-size: 100px;
+    font-family: 'Times New Roman', Times, serif;
 }
 .menu_desplegable{
     input{
@@ -116,7 +118,34 @@ background-color: white;
 }
 
 /*Media Queries*/
-@media only screen and (max-width:600px){
+@media only screen and (max-width:1800px){
+.grilla_productos{
+    grid-template-rows: 430px 40px 800px;
+}
+#imagen_productos_main{
+    width: 100%;
+    height: 400px;
+}
+}
+@media only screen and (max-width:1400px){
+    .formulario_registrarse{
+        flex-direction: column;
+    
+        section{
+            .mb-3{
+                width: 430px;
+            }
+        }
+    }
+    .grilla_productos{
+        grid-template-rows: 320px 40px 800px;
+    }
+    #imagen_productos_main{
+        width: 100%;
+        height: 300px;
+    }
+}
+@media only screen and (max-width:1040px){
     header{
         height: 140px;
     }
@@ -134,8 +163,29 @@ background-color: white;
         "productos filtros"
         "nada orden";
     }
+    #imagen_productos_main{
+        max-height: 158px;
+        width: 100%;
+    }
     .contacto{
         flex-direction: column;
+
+        .formulario_contacto{
+            display: flex;
+            flex-direction: row;
+        }
+
+        section{
+            div{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+
+                iframe{
+                    width: 500px;
+                }
+            }
+        }
     }
     #sponsors{
         display: flex;
@@ -147,7 +197,7 @@ background-color: white;
         transition: all 2s;
     }
     #imagen_inicio{
-        height: 340px;
+        max-height: 340px;
     }
 .productos{
 
@@ -183,14 +233,23 @@ background-color: white;
     background: yellow;
     min-height: 20px;
     top: 30px;
+    z-index: calc(130);
+
+    &:hover{
+        background: greenyellow;
+    }
 
     input{
         display:flex;
         @extend .superclase_menu_desplegable;
-        opacity: 30;
+        opacity: 0;
+        position: relative;
+        top: 0px;
 
         &:checked ~ nav{
             display: block;
+            position: relative;
+            top: -30px;
 
             ul{
                 display: flex;
@@ -242,4 +301,215 @@ nav{
         }
     }
 }
+.buscador{
+    position: relative;
+    top: 20px;
+}
+.productos{
+    height: 800px;
+    position: relative;
+    top: 30px;
+}
+.formulario_conectarse{
+    position:relative;
+    top: 30px;
+}
+.formulario_registrarse{
+    flex-direction: column;
+
+    section{
+        .mb-3{
+            width: 430px;
+        }
+    }
+}
+}
+
+@media only screen and (max-width:500px){
+header{
+    height: 130px;
+}
+.superclase_menu_desplegable2{
+    position: absolute;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    right: 0;
+    top: -40px;
+    width: 1060px;
+    height: 40px;
+    z-index: calc(2);
+}
+.menu_desplegable{
+    color: white;
+    position: relative;
+    background: yellow;
+    min-height: 20px;
+    top: 30px;
+    z-index: calc(130);
+
+    input{
+        display:flex;
+        @extend .superclase_menu_desplegable2;
+        opacity: 0;
+        z-index: calc(130);
+        position: relative;
+        top: 0px;
+        height: 30px;
+
+        &:checked ~ nav{
+            display: block;
+            position: relative;
+            top: -23px;
+            z-index: calc(230);
+
+            ul{
+                display: flex;
+                flex-direction: column;
+
+                li{
+                    display: inline;
+                }
+
+                .mi_cuenta{
+                   display: inline;
+
+                   ul{
+                       background-color: yellow;
+                       display: inline;
+                   }
+                }
+            }
+        }
+        &:checked ~ .barras{
+            display: none;
+        }
+        &:not(:checked) ~ .barras2{
+            display: none;
+        }
+    }
+    .barras{
+        @extend .superclase_menu_desplegable2;
+        font-size: 48px;
+        pointer-events: none;
+    }
+    .barras2{
+        @extend .superclase_menu_desplegable2;
+        font-size: 48px;
+        pointer-events: none;
+    }
+    nav{
+        display: none;
+    }
+}
+nav{
+    top: 10px;
+
+    ul{
+        li{
+            ul{
+                z-index:calc(8);
+            }
+        }
+    }
+}
+.productos{
+    ul{
+        li{
+            font-size: 15px;
+
+            .precios{
+                font-size: 20px;
+            }
+
+            img{
+                max-width: 130px;
+            }
+        }
+    }
+}
+}
+@media only screen and (max-width:460px){
+    .grilla_productos{
+        display: grid;
+        grid-template-columns: 1fr 3fr 1fr;
+        grid-template-rows: 140px 80px 800px 430px;
+        grid-template-areas:
+        "imagen imagen imagen"
+        "buscador buscador orden"
+        "productos productos productos"
+        "filtros filtros filtros";
+    }
+    .orden{
+        position: relative;
+        top: 30px;
+        right: 30px;
+    }
+    .buscador{
+        position: relative;
+        top: 30px;
+    }
+    .productos{
+        ul{
+            width: 430px;
+        }
+    }
+    .filtros{
+        position: relative;
+        top: 30px;
+    }
+}
+@media only screen and (max-width:430px){
+    header{
+        h1{
+            font-size: 60px;
+        }
+    }
+    .productos{
+        ul{
+            width: 100%;
+
+            li{
+                img{
+                    max-width: 130px;
+                }
+            }
+        }
+    }
+    .formulario_registrarse{
+        section{
+            .mb-3{
+                width: 230px;
+            }
+            p{
+                font-size: 60px;
+            }
+        }
+    }
+    #sponsors{
+        i img{
+            max-width: 300px;
+
+            &:hover{
+                max-width: 320px;
+            }
+        }
+    }
+}
+@media only screen and (max-width:370px){
+    header{
+        h1{
+            font-size: 50px;
+        }
+    }
+    .menu_desplegable{
+        top: 32px;
+    }
+    .formulario_registrarse{
+        section{
+            p{
+                font-size: 50px;
+            }
+        }
+    }
 }
