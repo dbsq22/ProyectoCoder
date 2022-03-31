@@ -9,9 +9,7 @@
   display: grid;
   grid-template-columns: 1fr 3fr 1fr;
   grid-template-rows: 540px 40px 800px;
-  grid-template-areas: "imagen imagen imagen"
- "buscador buscador buscador"
- "orden productos filtros"; }
+  grid-template-areas: "imagen imagen imagen" "buscador buscador buscador" "orden productos filtros"; }
 
 #imagen_productos_main {
   max-width: 100%;
@@ -27,22 +25,30 @@
 
 .productos {
   grid-area: productos;
-  height: 780px; }
+  height: 100%; }
   .productos ul {
     list-style-type: none;
     overflow: auto;
-    height: 100%;
-    justify-content: space-evenly; }
+    height: 100%; }
     .productos ul li {
-      display: flex;
-      font-size: 20px;
-      font-family: 'Times New Roman', Times, serif; }
+      display: grid;
+      grid-template-columns: 1fr 2fr 1fr;
+      grid-template-rows: 180px;
+      grid-template-areas: "producto descripcion precio"; }
+      .productos ul li .descripcion {
+        grid-area: descripcion;
+        font-size: 20px;
+        font-family: 'Times New Roman', Times, serif;
+        text-align: start; }
       .productos ul li .precios {
+        grid-area: precio;
         font-size: 40px;
         margin-top: 30px;
         color: greenyellow; }
-      .productos ul li img {
-        max-width: 180px; }
+      .productos ul li .producto {
+        grid-area: producto;
+        max-width: 180px;
+        height: 80%; }
 
 .filtros {
   grid-area: filtros; }
@@ -248,10 +254,7 @@ footer {
     display: grid;
     grid-template-columns: 3fr 1fr;
     grid-template-rows: 140px 40px 400px 400px;
-    grid-template-areas: "imagen imagen"
- "buscador buscador"
- "productos filtros"
- "nada orden"; }
+    grid-template-areas: "imagen imagen" "buscador buscador" "productos filtros" "nada orden"; }
   #imagen_productos_main {
     max-height: 158px;
     width: 100%; }
@@ -275,12 +278,12 @@ footer {
     transition: all 2s; }
   #imagen_inicio {
     max-height: 340px; }
-  .productos ul li {
+  .productos ul li .descripcion {
     font-size: 18px; }
-    .productos ul li .precios {
-      font-size: 28px; }
-    .productos ul li img {
-      max-width: 130px; }
+  .productos ul li .precios {
+    font-size: 28px; }
+  .productos ul li .producto {
+    max-width: 130px; }
   .superclase_menu_desplegable, .menu_desplegable input, .menu_desplegable .barras, .menu_desplegable .barras2 {
     position: absolute;
     margin: 0;
@@ -406,22 +409,19 @@ footer {
     top: 10px; }
     nav ul li ul {
       z-index: calc(8); }
-  .productos ul li {
+  .productos ul li .descripcion {
     font-size: 15px; }
-    .productos ul li .precios {
-      font-size: 20px; }
-    .productos ul li img {
-      max-width: 130px; } }
+  .productos ul li .precios {
+    font-size: 20px; }
+  .productos ul li .producto {
+    max-width: 130px; } }
 
 @media only screen and (max-width: 460px) {
   .grilla_productos {
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
     grid-template-rows: 140px 80px 800px 430px;
-    grid-template-areas: "imagen imagen imagen"
- "buscador buscador orden"
- "productos productos productos"
- "filtros filtros filtros"; }
+    grid-template-areas: "imagen imagen imagen" "buscador buscador orden" "productos productos productos" "filtros filtros filtros"; }
   .orden {
     position: relative;
     top: 30px;
@@ -430,7 +430,7 @@ footer {
     position: relative;
     top: 30px; }
   .productos ul {
-    width: 430px; }
+    width: 100%; }
   .filtros {
     position: relative;
     top: 30px; } }
@@ -440,7 +440,7 @@ footer {
     font-size: 60px; }
   .productos ul {
     width: 100%; }
-    .productos ul li img {
+    .productos ul li .producto {
       max-width: 130px; }
   .formulario_registrarse section .mb-3 {
     width: 230px; }

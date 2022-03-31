@@ -26,28 +26,39 @@
 }
 .productos{
     grid-area: productos;
-    height: 780px;
+    height: 100%;
 
     ul{
+        @extend .superclase;
         list-style-type: none;
         overflow:auto;
         height: 100%;
-        @extend .superclase;
-        justify-content: space-evenly;
 
         li{
-            display: flex;
-            font-size: 20px;
-            font-family: 'Times New Roman', Times, serif;
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            grid-template-rows: 180px;
+            grid-template-areas: 
+            "producto descripcion precio";
+
+            .descripcion{
+                grid-area: descripcion;
+                font-size: 20px;
+                font-family: 'Times New Roman', Times, serif;
+                text-align:start;
+            }
 
             .precios{
+                grid-area: precio;
                 font-size: 40px;
                 margin-top: 30px;
                 color:greenyellow;
             }
 
-            img{
+            .producto{
+                grid-area: producto;
                 max-width: 180px;
+                height: 80%;
             }
         }
     }

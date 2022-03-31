@@ -204,13 +204,15 @@ background-color: white;
     ul{
 
         li{
-            font-size: 18px;
+            .descripcion{
+                font-size: 18px;
+            }
 
             .precios{
                 font-size: 28px;
             }
 
-            img{
+            .producto{
                 max-width: 130px;
             }
         }
@@ -414,13 +416,15 @@ nav{
 .productos{
     ul{
         li{
-            font-size: 15px;
+            .descripcion{
+                font-size: 15px;
+            }
 
             .precios{
                 font-size: 20px;
             }
 
-            img{
+            .producto{
                 max-width: 130px;
             }
         }
@@ -449,7 +453,7 @@ nav{
     }
     .productos{
         ul{
-            width: 430px;
+            width: 100%;
         }
     }
     .filtros{
@@ -468,7 +472,7 @@ nav{
             width: 100%;
 
             li{
-                img{
+                .producto{
                     max-width: 130px;
                 }
             }
